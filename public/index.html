@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RETRO NETWORK // JOIN</title>
+  <meta name="description" content="Присоединяйтесь к RETRO NETWORK.">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="scanlines"></div>
+  <div class="noise"></div>
+
+  <header class="topbar">
+    <div class="logo">R/N<span>80</span></div>
+    <div class="status"><i></i> SYSTEM ONLINE</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">/// OFFICIAL RECRUITMENT SYSTEM ///</div>
+      <h1>ТВОЯ НОВАЯ<br><span>ЖИЗНЬ</span><br>НАЧИНАЕТСЯ ЗДЕСЬ.</h1>
+      <p class="hero-sub">
+        Мир вокруг тебя уже давно решил, каким ты должен быть.
+        Мы предлагаем сделать кое-что другое: <b>решить самому.</b>
+      </p>
+
+      <button id="joinBtn" class="join-btn">
+        <span>ПРИСОЕДИНИТЬСЯ</span>
+        <small>PRESS TO ENTER // 198X</small>
+      </button>
+    </section>
+
+    <section class="manifesto">
+      <div class="section-tag">[ TRANSMISSION 001 ]</div>
+      <h2>ПОЧЕМУ ТЫ ВСЁ ЕЩЁ<br><em>НЕ С НАМИ?</em></h2>
+      <div class="longtext">
+        <p>
+          Представь место, где твои идеи не исчезают в шуме бесконечного
+          информационного потока. Место, где тебя замечают не за количество
+          цифр возле твоего имени, а за то, <strong>кто ты на самом деле.</strong>
+        </p>
+        <p>
+          Здесь не обещают волшебную кнопку, которая мгновенно изменит твою
+          жизнь. Мы предлагаем кое-что гораздо интереснее — возможность
+          открыть дверь и сделать первый шаг. Иногда именно с этого начинается
+          самое важное путешествие.
+        </p>
+        <p>
+          Возможно, ты ищешь людей, которые понимают твои идеи. Возможно,
+          хочешь показать миру то, что умеешь. Возможно, тебе просто надоело
+          стоять на месте и хочется попробовать что-то совершенно новое.
+          Какая бы причина ни привела тебя сюда — <strong>она уже достаточно
+          важна, чтобы рассказать о ней.</strong>
+        </p>
+        <p>
+          Мы верим, что человек становится счастливее не тогда, когда получает
+          всё сразу, а тогда, когда чувствует, что движется куда-то по-настоящему.
+          Новые знакомства. Новые задачи. Новые истории. Ошибки, открытия,
+          неожиданные победы и моменты, которыми потом хочется поделиться.
+        </p>
+        <p>
+          Поэтому здесь нет длинного списка правил. Есть только один вопрос:
+          <strong>готов ли ты сделать первый шаг?</strong>
+        </p>
+        <p class="big-quote">
+          «НЕ ЖДИ, ПОКА НАСТУПИТ ПОДХОДЯЩИЙ МОМЕНТ.
+          ВОЗМОЖНО, ОН УЖЕ НАСТУПИЛ.»
+        </p>
+      </div>
+    </section>
+
+    <section id="formSection" class="form-section hidden">
+      <div class="terminal-head">
+        <span>APPLICATION TERMINAL</span>
+        <span>SECURE CHANNEL // 80.86</span>
+      </div>
+
+      <form id="applicationForm">
+        <label>ИМЯ
+          <input name="name" required maxlength="120" placeholder="Введите имя">
+        </label>
+
+        <label>КАК К ВАМ ОБРАЩАТЬСЯ
+          <input name="addressName" required maxlength="120" placeholder="Например: Саша, Алекс, Сан">
+        </label>
+
+        <label>ВАША ЭЛЕКТРОННАЯ ПОЧТА
+          <input type="email" name="email" required maxlength="254" placeholder="you@example.com">
+        </label>
+
+        <label>ЦЕЛЬ, С КОТОРОЙ ПОДАЁТСЯ АНКЕТА
+          <textarea name="goal" required maxlength="1000" placeholder="Расскажите, зачем вы хотите присоединиться..."></textarea>
+        </label>
+
+        <label>РАССКАЖИТЕ О СЕБЕ
+          <textarea name="about" required maxlength="5000" placeholder="Кто вы? Чем занимаетесь? Что вам интересно?"></textarea>
+        </label>
+
+        <div class="human-box">
+          <div class="human-title">АНТИ-БОТ ПРОТОКОЛ</div>
+          <p id="checkText">Нажмите кнопку. Система проведёт визуальную проверку.</p>
+          <button type="button" id="humanBtn" class="human-btn">Я НЕ БОТ</button>
+          <div class="progress"><div id="progressBar"></div></div>
+        </div>
+
+        <button type="submit" id="submitBtn" class="submit-btn" disabled>
+          ПОДТВЕРДИТЬ И ОТПРАВИТЬ
+        </button>
+
+        <div id="formMessage" class="form-message"></div>
+      </form>
+    </section>
+
+    <section id="successSection" class="success hidden">
+      <div class="success-mark">✓</div>
+      <div class="section-tag">[ TRANSMISSION COMPLETE ]</div>
+      <h2>ЗАЯВКА<br><span>ПРИНЯТА.</span></h2>
+      <p>
+        Система получила твою анкету. Теперь остаётся ждать ответа.
+        Первый шаг сделан.
+      </p>
+      <button onclick="location.reload()" class="return-btn">ВЕРНУТЬСЯ</button>
+    </section>
+  </main>
+
+  <footer>
+    <span>RETRO NETWORK © 198X—2026</span>
+    <span>DO NOT ADJUST YOUR MONITOR</span>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
