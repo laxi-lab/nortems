@@ -3,131 +3,187 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RETRO NETWORK // JOIN</title>
-  <meta name="description" content="Присоединяйтесь к RETRO NETWORK.">
+  <title>NORTEMS // SYSTEM 84</title>
+  <meta name="description" content="NORTEMS — закрытая сеть.">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <div class="scanlines"></div>
-  <div class="noise"></div>
+  <div class="crt">
+    <div class="scanlines"></div>
+    <div class="noise"></div>
+  </div>
 
-  <header class="topbar">
-    <div class="logo">R/N<span>80</span></div>
-    <div class="status"><i></i> SYSTEM ONLINE</div>
+  <header class="header">
+    <button class="menu-trigger" id="menuTrigger" aria-label="Открыть меню">
+      <span></span><span></span><span></span>
+    </button>
+
+    <button class="wordmark" id="homeBtn" aria-label="NORTEMS">
+      <span>NORTEMS</span>
+      <small>NETWORK // 84</small>
+    </button>
+
+    <div class="header-code">
+      <span>SYS.84</span>
+      <i></i>
+      <span>ONLINE</span>
+    </div>
   </header>
 
-  <main>
+  <aside class="rail" aria-label="Быстрые действия">
+    <button class="rail-btn" data-action="clock" title="Время">
+      <span class="icon">◷</span><small>TIME</small>
+    </button>
+    <button class="rail-btn" data-action="language" title="Язык">
+      <span class="icon">文</span><small>LANG</small>
+    </button>
+    <button class="rail-btn" data-action="community" title="Сообщество">
+      <span class="icon">✣</span><small>COMM</small>
+    </button>
+    <button class="rail-btn" data-action="notifications" title="Уведомления">
+      <span class="icon">⌁</span><small>NOTIFY</small>
+    </button>
+    <button class="rail-btn" data-action="theme" title="Смена темы">
+      <span class="icon">◐</span><small>THEME</small>
+    </button>
+    <div class="rail-line"></div>
+    <button class="rail-btn social" data-action="tiktok" title="TikTok">
+      <span class="icon">♪</span><small>TIKTOK</small>
+    </button>
+    <button class="rail-btn social" data-action="youtube" title="YouTube">
+      <span class="icon">▶</span><small>VIDEO</small>
+    </button>
+    <button class="rail-btn social" data-action="discord" title="Discord">
+      <span class="icon">◉</span><small>DISCORD</small>
+    </button>
+  </aside>
+
+  <div class="menu-overlay" id="menuOverlay">
+    <div class="menu-panel">
+      <div class="menu-top">
+        <span>MAIN MENU</span>
+        <button id="menuClose">×</button>
+      </div>
+      <nav>
+        <button class="menu-item active" data-section="home"><b>01</b><span>ГЛАВНАЯ</span><em>HOME</em></button>
+        <button class="menu-item" data-section="about"><b>02</b><span>О NORTEMS</span><em>ABOUT</em></button>
+        <button class="menu-item" data-section="people"><b>03</b><span>УЧАСТНИКИ</span><em>PEOPLE</em></button>
+        <button class="menu-item" data-section="archive"><b>04</b><span>АРХИВ</span><em>ARCHIVE</em></button>
+        <button class="menu-item" data-section="join"><b>05</b><span>ПРИСОЕДИНИТЬСЯ</span><em>JOIN</em></button>
+      </nav>
+      <div class="menu-footer">CHANNEL: NORTEMS / STATUS: OPEN</div>
+    </div>
+  </div>
+
+  <main id="home" class="page">
     <section class="hero">
-      <div class="eyebrow">/// OFFICIAL RECRUITMENT SYSTEM ///</div>
-      <h1>ТВОЯ НОВАЯ<br><span>ЖИЗНЬ</span><br>НАЧИНАЕТСЯ ЗДЕСЬ.</h1>
-      <p class="hero-sub">
-        Мир вокруг тебя уже давно решил, каким ты должен быть.
-        Мы предлагаем сделать кое-что другое: <b>решить самому.</b>
-      </p>
-
-      <button id="joinBtn" class="join-btn">
-        <span>ПРИСОЕДИНИТЬСЯ</span>
-        <small>PRESS TO ENTER // 198X</small>
-      </button>
-    </section>
-
-    <section class="manifesto">
-      <div class="section-tag">[ TRANSMISSION 001 ]</div>
-      <h2>ПОЧЕМУ ТЫ ВСЁ ЕЩЁ<br><em>НЕ С НАМИ?</em></h2>
-      <div class="longtext">
-        <p>
-          Представь место, где твои идеи не исчезают в шуме бесконечного
-          информационного потока. Место, где тебя замечают не за количество
-          цифр возле твоего имени, а за то, <strong>кто ты на самом деле.</strong>
-        </p>
-        <p>
-          Здесь не обещают волшебную кнопку, которая мгновенно изменит твою
-          жизнь. Мы предлагаем кое-что гораздо интереснее — возможность
-          открыть дверь и сделать первый шаг. Иногда именно с этого начинается
-          самое важное путешествие.
-        </p>
-        <p>
-          Возможно, ты ищешь людей, которые понимают твои идеи. Возможно,
-          хочешь показать миру то, что умеешь. Возможно, тебе просто надоело
-          стоять на месте и хочется попробовать что-то совершенно новое.
-          Какая бы причина ни привела тебя сюда — <strong>она уже достаточно
-          важна, чтобы рассказать о ней.</strong>
-        </p>
-        <p>
-          Мы верим, что человек становится счастливее не тогда, когда получает
-          всё сразу, а тогда, когда чувствует, что движется куда-то по-настоящему.
-          Новые знакомства. Новые задачи. Новые истории. Ошибки, открытия,
-          неожиданные победы и моменты, которыми потом хочется поделиться.
-        </p>
-        <p>
-          Поэтому здесь нет длинного списка правил. Есть только один вопрос:
-          <strong>готов ли ты сделать первый шаг?</strong>
-        </p>
-        <p class="big-quote">
-          «НЕ ЖДИ, ПОКА НАСТУПИТ ПОДХОДЯЩИЙ МОМЕНТ.
-          ВОЗМОЖНО, ОН УЖЕ НАСТУПИЛ.»
-        </p>
-      </div>
-    </section>
-
-    <section id="formSection" class="form-section hidden">
-      <div class="terminal-head">
-        <span>APPLICATION TERMINAL</span>
-        <span>SECURE CHANNEL // 80.86</span>
+      <div class="terminal">
+        <p>&gt; CONNECTION ESTABLISHED_</p>
+        <p>&gt; WELCOME, VISITOR.</p>
       </div>
 
-      <form id="applicationForm">
-        <label>ИМЯ
-          <input name="name" required maxlength="120" placeholder="Введите имя">
-        </label>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="kicker">[ PRIVATE NETWORK // FIRST VISIT ]</div>
 
-        <label>КАК К ВАМ ОБРАЩАТЬСЯ
-          <input name="addressName" required maxlength="120" placeholder="Например: Саша, Алекс, Сан">
-        </label>
+          <h1><span class="glitch" data-text="ТЕКСТ">ТЕКСТ</span></h1>
 
-        <label>ВАША ЭЛЕКТРОННАЯ ПОЧТА
-          <input type="email" name="email" required maxlength="254" placeholder="you@example.com">
-        </label>
+          <div class="rule"></div>
 
-        <label>ЦЕЛЬ, С КОТОРОЙ ПОДАЁТСЯ АНКЕТА
-          <textarea name="goal" required maxlength="1000" placeholder="Расскажите, зачем вы хотите присоединиться..."></textarea>
-        </label>
+          <p class="lead">
+            Это место ещё не успело решить, кем ты должен быть.
+            Поэтому здесь можно просто остановиться, посмотреть вокруг
+            и понять, хочешь ли ты остаться.
+          </p>
 
-        <label>РАССКАЖИТЕ О СЕБЕ
-          <textarea name="about" required maxlength="5000" placeholder="Кто вы? Чем занимаетесь? Что вам интересно?"></textarea>
-        </label>
+          <div class="actions">
+            <button class="main-action" id="joinBtn">ПРИСОЕДИНИТЬСЯ <b>→</b></button>
+            <button class="secondary-action" data-placeholder="login">ВОЙТИ</button>
+          </div>
 
-        <div class="human-box">
-          <div class="human-title">АНТИ-БОТ ПРОТОКОЛ</div>
-          <p id="checkText">Нажмите кнопку. Система проведёт визуальную проверку.</p>
-          <button type="button" id="humanBtn" class="human-btn">Я НЕ БОТ</button>
-          <div class="progress"><div id="progressBar"></div></div>
+          <div class="microcopy">
+            <span>NO ADS</span>
+            <span>NO FEED</span>
+            <span>NO ALGORITHM</span>
+          </div>
         </div>
 
-        <button type="submit" id="submitBtn" class="submit-btn" disabled>
-          ПОДТВЕРДИТЬ И ОТПРАВИТЬ
-        </button>
-
-        <div id="formMessage" class="form-message"></div>
-      </form>
+        <div class="system-card">
+          <div class="card-head"><span>SEARCH / 1984</span><span>●</span></div>
+          <div class="big-mark">N</div>
+          <div class="meter-label">SEARCH DATA</div>
+          <div class="meter"><i></i></div>
+          <div class="card-data">
+            <span>CHANNEL</span><b>84</b>
+            <span>STATUS</span><b>OPEN</b>
+            <span>VISITORS</span><b>---</b>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="successSection" class="success hidden">
-      <div class="success-mark">✓</div>
-      <div class="section-tag">[ TRANSMISSION COMPLETE ]</div>
-      <h2>ЗАЯВКА<br><span>ПРИНЯТА.</span></h2>
-      <p>
-        Система получила твою анкету. Теперь остаётся ждать ответа.
-        Первый шаг сделан.
-      </p>
-      <button onclick="location.reload()" class="return-btn">ВЕРНУТЬСЯ</button>
+    <section class="description" id="about">
+      <div class="section-index">01 / DESCRIPTION</div>
+      <div class="description-grid">
+        <h2>ТЕКСТ<br><span>ОПИСАНИЕ</span></h2>
+        <div class="description-copy">
+          <p>
+            NORTEMS — это не попытка сделать ещё одну страницу, которую
+            пролистывают между двумя уведомлениями. Это небольшое цифровое
+            пространство для людей, которым интересно находить странное,
+            создавать своё и разговаривать не только о том, что уже стало
+            популярным.
+          </p>
+          <p>
+            Здесь нет необходимости выглядеть определённым образом.
+            Не нужно подбирать правильный ответ или доказывать, что ты
+            достаточно интересный. Можно прийти с идеей, с историей,
+            с проектом или просто с любопытством.
+          </p>
+          <p class="quote">«СНАЧАЛА ПОСМОТРИ.<br>ПОТОМ РЕШИ, ОСТАВАТЬСЯ ЛИ.»</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="placeholder-section" id="people">
+      <div class="section-index">02 / PEOPLE</div>
+      <h2>ЛЮДИ<br><span>СКОРО.</span></h2>
+      <p>Раздел пока закрыт. Здесь появятся участники сети.</p>
+    </section>
+
+    <section class="placeholder-section" id="archive">
+      <div class="section-index">03 / ARCHIVE</div>
+      <h2>АРХИВ<br><span>СКОРО.</span></h2>
+      <p>Старые записи, события и материалы сети.</p>
+    </section>
+
+    <section class="join-section" id="join">
+      <div class="section-index">04 / APPLICATION</div>
+      <div class="join-box">
+        <h2>ХОЧЕШЬ<br><span>ВОЙТИ?</span></h2>
+        <p>Заполни короткую анкету. Никаких публичных профилей без твоего согласия.</p>
+
+        <form id="applicationForm">
+          <label>ИМЯ<input name="name" required maxlength="120" placeholder="Имя"></label>
+          <label>КАК К ТЕБЕ ОБРАЩАТЬСЯ<input name="addressName" required maxlength="120" placeholder="Имя / ник"></label>
+          <label>EMAIL<input type="email" name="email" required maxlength="254" placeholder="you@example.com"></label>
+          <label>ЦЕЛЬ<textarea name="goal" required maxlength="1000" placeholder="Зачем подаёшь заявку?"></textarea></label>
+          <label>О СЕБЕ<textarea name="about" required maxlength="5000" placeholder="Расскажи немного о себе"></textarea></label>
+
+          <div class="human-box">
+            <span id="checkText">ПРОВЕРКА: НЕ БОТ</span>
+            <button type="button" id="humanBtn">ПРОВЕРИТЬ</button>
+            <div class="progress"><i id="progressBar"></i></div>
+          </div>
+
+          <button class="submit-btn" id="submitBtn" type="submit" disabled>ОТПРАВИТЬ ЗАЯВКУ →</button>
+          <p class="form-message" id="formMessage"></p>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <span>RETRO NETWORK © 198X—2026</span>
-    <span>DO NOT ADJUST YOUR MONITOR</span>
-  </footer>
+  <div class="toast" id="toast"></div>
 
   <script src="/script.js"></script>
 </body>

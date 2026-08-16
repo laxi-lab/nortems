@@ -1,14 +1,13 @@
-# RETRO NETWORK — Vercel version
+# NORTEMS // SYSTEM 84
 
-Загрузите содержимое этой папки в корень GitHub-репозитория.
+Первая версия нового визуального стиля по референсу пользователя.
 
-В Vercel → Settings → Environment Variables → Production добавьте:
-- SMTP_HOST = smtp.gmail.com
-- SMTP_PORT = 465
-- SMTP_SECURE = true
-- SMTP_USER = ваш Gmail
-- SMTP_PASS = Gmail App Password
-- NOTIFY_TO = sandorado100@gmail.com
+- CRT/scanlines/noise
+- чёрно-зелёная терминальная эстетика
+- боковая панель быстрых действий
+- открывающееся меню
+- адаптивная мобильная версия
+- небольшая интерактивность кнопок
+- рабочая форма заявки и Vercel API сохранены
 
-После изменения переменных сделайте Redeploy.
-Не загружайте `.env` в GitHub.
+Загрузите содержимое папки в корень GitHub-репозитория.
