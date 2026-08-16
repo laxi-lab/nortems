@@ -52,6 +52,23 @@ document.querySelectorAll("[data-placeholder]").forEach(btn => {
 });
 
 const actions = {
+  lang: () => {
+    const modal = document.getElementById("languageModal");
+    if (modal) {
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+    }
+  },
+  tiktok: () => {
+    window.open("https://www.tiktok.com/@sandoradosicry", "_blank", "noopener,noreferrer");
+  },
+  youtube: () => {
+    window.open("https://www.youtube.com/@San_Dorado", "_blank", "noopener,noreferrer");
+  },
+  discord: () => {
+    window.open("https://discord.gg/DPHQTsq7E", "_blank", "noopener,noreferrer");
+  },
+
   clock: () => showToast(new Date().toLocaleTimeString("ru-RU", {hour:"2-digit",minute:"2-digit"}) + " // LOCAL"),
   language: () => showToast("ЯЗЫК: RU // ПЕРЕКЛЮЧАТЕЛЬ СКОРО"),
   community: () => showToast("СООБЩЕСТВО // РАЗДЕЛ СКОРО"),
@@ -122,4 +139,31 @@ form.addEventListener("submit", async (e) => {
     formMessage.textContent = "ОШИБКА: " + err.message;
     submitBtn.disabled = false;
   }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("languageModal");
+  const close = document.getElementById("languageClose");
+
+  function closeLanguage() {
+    if (!modal) return;
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+  }
+
+  if (close) close.addEventListener("click", closeLanguage);
+  if (modal) {
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeLanguage();
+    });
+  }
+
+  document.querySelectorAll(".language-options button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const language = btn.dataset.lang || btn.textContent.trim();
+      localStorage.setItem("nortems-language", language);
+      if (typeof showToast === "function") showToast("ЯЗЫК: " + language);
+      closeLanguage();
+    });
+  });
 });
