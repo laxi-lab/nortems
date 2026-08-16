@@ -57,10 +57,19 @@ const actions = {
   community: () => showToast("СООБЩЕСТВО // РАЗДЕЛ СКОРО"),
   notifications: () => showToast("УВЕДОМЛЕНИЯ // 0"),
   theme: () => {
-    document.body.classList.toggle("light-mode");
-    showToast(document.body.classList.contains("light-mode")
-      ? "ТЕМА: ЧЁРНОЕ НА БЕЛОМ"
-      : "ТЕМА: БЕЛОЕ НА ЧЁРНОМ");
+    const themes = ["green", "cyan", "red", "yellow"];
+    const labels = {
+      green: "ЗЕЛЁНАЯ",
+      cyan: "ГОЛУБАЯ",
+      red: "КРАСНАЯ",
+      yellow: "ЖЁЛТАЯ"
+    };
+    const current = themes.findIndex(t => document.body.classList.contains("theme-" + t));
+    const next = themes[(current + 1) % themes.length];
+
+    document.body.classList.remove("theme-green", "theme-cyan", "theme-red", "theme-yellow", "light-mode", "alt");
+    document.body.classList.add("theme-" + next);
+    showToast("ТЕМА: " + labels[next]);
   },
   tiktok: () => showToast("TIKTOK // ССЫЛКА СКОРО"),
   youtube: () => showToast("VIDEO // ССЫЛКА СКОРО"),

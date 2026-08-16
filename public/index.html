@@ -7,7 +7,7 @@
   <meta name="description" content="NORTEMS — закрытая сеть.">
   <link rel="stylesheet" href="/style.css">
 </head>
-<body>
+<body class="theme-green">
   <div class="crt">
     <div class="scanlines"></div>
     <div class="noise"></div>
@@ -31,43 +31,7 @@
   </header>
 
   <aside class="rail" aria-label="Быстрые действия">
-    <button class="rail-btn" data-action="clock" title="Время">
-      <span class="icon">◷</span><small>ВРЕМЯ</small>
-    </button>
-    <button class="rail-btn" data-action="language" title="Язык">
-      <span class="icon">文</span><small>ЯЗЫК</small>
-    </button>
-    <button class="rail-btn" data-action="community" title="Сообщество">
-      <span class="icon">✣</span><small>ЛЮДИ</small>
-    </button>
-    <button class="rail-btn" data-action="notifications" title="Уведомления">
-      <span class="icon">⌁</span><small>СВЯЗЬ</small>
-    </button>
-    <button class="rail-btn" data-action="theme" title="Смена темы">
-      <span class="icon">◐</span><small>ТЕМА</small>
-    </button>
     <div class="rail-line"></div>
-    <button class="rail-btn social" data-action="tiktok" title="TikTok" aria-label="TikTok">
-      <span class="icon social-icon tiktok-icon">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M14.2 3.2v10.1a4.1 4.1 0 1 1-3.1-4v3.1a1.2 1.2 0 1 0 .8 1.2V3.2h2.3c.3 1.8 1.3 3.1 3.1 3.8v2.4a7 7 0 0 1-3.1-1.5v5.4a4.3 4.3 0 1 1-3.1-4.2V3.2z"/>
-        </svg>
-      </span><small>ТИКТОК</small>
-    </button>
-    <button class="rail-btn social" data-action="youtube" title="YouTube" aria-label="YouTube">
-      <span class="icon social-icon youtube-icon">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M21.2 7.2a2.7 2.7 0 0 0-1.9-1.9C17.6 4.8 12 4.8 12 4.8s-5.6 0-7.3.5A2.7 2.7 0 0 0 2.8 7.2 28 28 0 0 0 2.3 12a28 28 0 0 0 .5 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.3.5 7.3.5s5.6 0 7.3-.5a2.7 2.7 0 0 0 1.9-1.9 28 28 0 0 0 .5-4.8 28 28 0 0 0-.5-4.8zM10 15.5v-7l6 3.5z"/>
-        </svg>
-      </span><small>ЮТУБ</small>
-    </button>
-    <button class="rail-btn social" data-action="discord" title="Discord" aria-label="Discord">
-      <span class="icon social-icon discord-icon">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M18.9 5.3A16.2 16.2 0 0 0 15 4l-.5 1a14.2 14.2 0 0 0-5 0L9 4a16.2 16.2 0 0 0-3.9 1.3C2.6 7.6 2 11.7 2.2 15.8a15.7 15.7 0 0 0 4.8 2.4l1.2-1.6c-.7-.3-1.3-.6-1.9-1 .2.2.5.3.7.4 2.8 1.3 5.9 1.3 8.7 0 .3-.1.5-.2.8-.4-.6.4-1.2.7-1.9 1l1.2 1.6a15.7 15.7 0 0 0 4.8-2.4c.2-4.1-.4-8.2-1.7-10.5zM8.5 14.1c-.8 0-1.5-.8-1.5-1.8s.7-1.8 1.5-1.8 1.5.8 1.5 1.8-.7 1.8-1.5 1.8zm7 0c-.8 0-1.5-.8-1.5-1.8s.7-1.8 1.5-1.8 1.5.8 1.5 1.8-.7 1.8-1.5 1.8z"/>
-        </svg>
-      </span><small>ДИСКОРД</small>
-    </button>
   </aside>
 
   <div class="menu-overlay" id="menuOverlay">
@@ -137,7 +101,7 @@
     <section class="description" id="about">
       <div class="section-index">01 / DESCRIPTION</div>
       <div class="description-grid">
-        <h2>ТЕКСТ<br><span>ОПИСАНИЕ</span></h2>
+        <h2>Аут-Лайн<br><span>ОПИСАНИЕ</span></h2>
         <div class="description-copy">
           <p>
             NORTEMS — это не попытка сделать ещё одну страницу, которую
@@ -163,11 +127,29 @@
       <p>Раздел пока закрыт. Здесь появятся участники сети.</p>
     </section>
 
-    <section class="placeholder-section" id="archive">
-      <div class="section-index">03 / ARCHIVE</div>
-      <h2>АРХИВ<br><span>СКОРО.</span></h2>
-      <p>Старые записи, события и материалы сети.</p>
-    </section>
+    
+<section class="archive-section" id="archive">
+  <div class="section-kicker">АРХИВ / ИЗМЕНЕНИЯ</div>
+  <h2>Переход от старой версии к новой</h2>
+  <div class="archive-grid">
+    <article class="archive-card">
+      <div class="archive-version">ВЕРСИЯ 01</div>
+      <h3>Старая версия</h3>
+      <p>Первый вариант Аут-Лайна был построен вокруг яркой рекламной эстетики: насыщенные цвета, крупная кнопка присоединения и визуальная подача, рассчитанная на мгновенное внимание.</p>
+    </article>
+    <article class="archive-card">
+      <div class="archive-version">ВЕРСИЯ 02</div>
+      <h3>Новая версия</h3>
+      <p>Интерфейс был полностью переведён в строгую ретро-компьютерную эстетику: CRT, терминальная графика, сканирующие линии, системные сообщения и минималистичная навигация.</p>
+    </article>
+    <article class="archive-card">
+      <div class="archive-version">ВЕРСИЯ 03</div>
+      <h3>Текущая система</h3>
+      <p>В меню собраны системные функции и социальные ссылки, а цветовая схема получила четыре режима: зелёный, голубой, красный и жёлтый.</p>
+    </article>
+  </div>
+</section>
+
 
     <section class="join-section" id="join">
       <div class="section-index">04 / APPLICATION</div>
