@@ -1,237 +1,218 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NORTEMS // SYSTEM 84</title>
-  <meta name="description" content="NORTEMS — закрытая сеть.">
-  <link rel="stylesheet" href="/style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n-title="brand">NORTEMS // SYSTEM 84</title>
+<meta content="NORTEMS — закрытая сеть." data-i18n-content="hero" name="description"/>
+<link href="/style.css" rel="stylesheet"/>
 </head>
 <body class="theme-green">
-  <div class="crt">
-    <div class="scanlines"></div>
-    <div class="noise"></div>
-  </div>
-
-  <header class="header">
-    <button class="menu-trigger" id="menuTrigger" aria-label="Открыть главное меню" title="Открыть меню">
-      <span></span><span></span><span></span>
-    </button>
-
-    <button class="wordmark" id="homeBtn" aria-label="NORTEMS">
-      <span>NORTEMS</span>
-      <small>NETWORK // 84</small>
-    </button>
-
-    <div class="header-code">
-      <span>SYS.84</span>
-      <i></i>
-      <span>ONLINE</span>
-    </div>
-  </header>
-
-  <aside class="rail" aria-label="Быстрые действия">
-    <div class="rail-line"></div>
-  
-    <button class="rail-btn" data-action="time" title="Время">
-      <span class="icon">◷</span><small data-i18n="time">ВРЕМЯ</small>
-    </button>
-    <button class="rail-btn" data-action="lang" title="Язык">
-      <span class="icon">文</span><small data-i18n="lang">ЯЗЫК</small>
-    </button>
-    <button class="rail-btn" data-action="notify" title="Связь">
-      <span class="icon">⌁</span><small data-i18n="notify">СВЯЗЬ</small>
-    </button>
-    <button class="rail-btn" data-action="theme" title="Тема">
-      <span class="icon">◐</span><small data-i18n="theme">ТЕМА</small>
-    </button>
-    
-    <button class="rail-btn social" data-action="tiktok" title="TikTok" aria-label="TikTok">
-      <span class="icon social-icon tiktok-icon">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 3.2v10.1a4.1 4.1 0 1 1-3.1-4v3.1a1.2 1.2 0 1 0 .8 1.2V3.2h2.3c.3 1.8 1.3 3.1 3.1 3.8v2.4a7 7 0 0 1-3.1-1.5v5.4a4.3 4.3 0 1 1-3.1-4.2V3.2z"/></svg>
-      </span><small data-i18n="tiktok">ТИКТОК</small>
-    </button>
-    <button class="rail-btn social" data-action="youtube" title="YouTube" aria-label="YouTube">
-      <span class="icon social-icon youtube-icon">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.2 7.2a2.7 2.7 0 0 0-1.9-1.9C17.6 4.8 12 4.8 12 4.8s-5.6 0-7.3.5A2.7 2.7 0 0 0 2.8 7.2 28 28 0 0 0 2.3 12a28 28 0 0 0 .5 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.3.5 7.3.5s5.6 0 7.3-.5a2.7 2.7 0 0 0 1.9-1.9 28 28 0 0 0 .5-4.8 28 28 0 0 0-.5-4.8zM10 15.5v-7l6 3.5z"/></svg>
-      </span><small data-i18n="youtube">ЮТУБ</small>
-    </button>
-    <button class="rail-btn social" data-action="discord" title="Discord" aria-label="Discord">
-      <span class="icon social-icon discord-icon">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 5.3A16.2 16.2 0 0 0 15 4l-.5 1a14.2 14.2 0 0 0-5 0L9 4a16.2 16.2 0 0 0-3.9 1.3C2.6 7.6 2 11.7 2.2 15.8a15.7 15.7 0 0 0 4.8 2.4l1.2-1.6c-.7-.3-1.3-.6-1.9-1 .2.2.5.3.7.4 2.8 1.3 5.9 1.3 8.7 0 .3-.1.5-.2.8-.4-.6.4-1.2.7-1.9 1l1.2 1.6a15.7 15.7 0 0 0 4.8-2.4c.2-4.1-.4-8.2-1.7-10.5zM8.5 14.1c-.8 0-1.5-.8-1.5-1.8s.7-1.8 1.5-1.8 1.5.8 1.5 1.8-.7 1.8-1.5 1.8zm7 0c-.8 0-1.5-.8-1.5-1.8s.7-1.8 1.5-1.8 1.5.8 1.5 1.8-.7 1.8-1.5 1.8z"/></svg>
-      </span><small data-i18n="discord">ДИСКОРД</small>
-    </button>
+<div class="crt">
+<div class="scanlines"></div>
+<div class="noise"></div>
+</div>
+<header class="header">
+<button aria-label="Открыть главное меню" class="menu-trigger" data-i18n-aria-label="menu_open" data-i18n-title="menu_title" id="menuTrigger" title="Открыть меню">
+<span></span><span></span><span></span>
+</button>
+<button aria-label="NORTEMS" class="wordmark" id="homeBtn">
+<span data-i18n="brand">NORTEMS</span>
+<small data-i18n="network">NETWORK // 84</small>
+</button>
+<div class="header-code">
+<span data-i18n="sys">SYS.84</span>
+<i></i>
+<span data-i18n="online">ONLINE</span>
+</div>
+</header>
+<aside aria-label="Быстрые действия" class="rail">
+<div class="rail-line"></div>
+<button class="rail-btn" data-action="time" title="Время">
+<span class="icon">◷</span><small data-i18n="time">ВРЕМЯ</small>
+</button>
+<button class="rail-btn" data-action="lang" title="Язык">
+<span class="icon">文</span><small data-i18n="language">ЯЗЫК</small>
+</button>
+<button class="rail-btn" data-action="notify" title="Связь">
+<span class="icon">⌁</span><small data-i18n="contact">СВЯЗЬ</small>
+</button>
+<button class="rail-btn" data-action="theme" title="Тема">
+<span class="icon">◐</span><small data-i18n="theme">ТЕМА</small>
+</button>
+<button aria-label="TikTok" class="rail-btn social" data-action="tiktok" title="TikTok">
+<span class="icon social-icon tiktok-icon">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M14.2 3.2v10.1a4.1 4.1 0 1 1-3.1-4v3.1a1.2 1.2 0 1 0 .8 1.2V3.2h2.3c.3 1.8 1.3 3.1 3.1 3.8v2.4a7 7 0 0 1-3.1-1.5v5.4a4.3 4.3 0 1 1-3.1-4.2V3.2z"></path></svg>
+</span><small data-i18n="tiktok">ТИКТОК</small>
+</button>
+<button aria-label="YouTube" class="rail-btn social" data-action="youtube" title="YouTube">
+<span class="icon social-icon youtube-icon">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M21.2 7.2a2.7 2.7 0 0 0-1.9-1.9C17.6 4.8 12 4.8 12 4.8s-5.6 0-7.3.5A2.7 2.7 0 0 0 2.8 7.2 28 28 0 0 0 2.3 12a28 28 0 0 0 .5 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.3.5 7.3.5s5.6 0 7.3-.5a2.7 2.7 0 0 0 1.9-1.9 28 28 0 0 0 .5-4.8 28 28 0 0 0-.5-4.8zM10 15.5v-7l6 3.5z"></path></svg>
+</span><small data-i18n="youtube">ЮТУБ</small>
+</button>
+<button aria-label="Discord" class="rail-btn social" data-action="discord" title="Discord">
+<span class="icon social-icon discord-icon">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M18.9 5.3A16.2 16.2 0 0 0 15 4l-.5 1a14.2 14.2 0 0 0-5 0L9 4a16.2 16.2 0 0 0-3.9 1.3C2.6 7.6 2 11.7 2.2 15.8a15.7 15.7 0 0 0 4.8 2.4l1.2-1.6c-.7-.3-1.3-.6-1.9-1 .2.2.5.3.7.4 2.8 1.3 5.9 1.3 8.7 0 .3-.1.5-.2.8-.4-.6.4-1.2.7-1.9 1l1.2 1.6a15.7 15.7 0 0 0 4.8-2.4c.2-4.1-.4-8.2-1.7-10.5zM8.5 14.1c-.8 0-1.5-.8-1.5-1.8s.7-1.8 1.5-1.8 1.5.8 1.5 1.8-.7 1.8-1.5 1.8zm7 0c-.8 0-1.5-.8-1.5-1.8s.7-1.8 1.5-1.8 1.5.8 1.5 1.8-.7 1.8-1.5 1.8z"></path></svg>
+</span><small data-i18n="discord">ДИСКОРД</small>
+</button>
 </aside>
-
-  <div class="menu-overlay" id="menuOverlay">
-    <div class="menu-panel">
-      <div class="menu-top">
-        <span>MAIN MENU</span>
-        <button id="menuClose">×</button>
-      </div>
-      <nav>
-        <button class="menu-item active" data-section="home"><b>01</b><span>ГЛАВНАЯ</span><em>HOME</em></button>
-        <button class="menu-item" data-section="about"><b>02</b><span>О NORTEMS</span><em>ABOUT</em></button>
-        <button class="menu-item" data-section="people"><b>03</b><span>УЧАСТНИКИ</span><em>PEOPLE</em></button>
-        <button class="menu-item" data-section="archive"><b>04</b><span>АРХИВ</span><em>ARCHIVE</em></button>
-        <button class="menu-item" data-section="join"><b>05</b><span>ПРИСОЕДИНИТЬСЯ</span><em>JOIN</em></button>
-      </nav>
-      <div class="menu-footer">CHANNEL: NORTEMS / STATUS: OPEN</div>
-    </div>
-  </div>
-
-  <main id="home" class="page">
-    <section class="hero">
-      <div class="terminal">
-        <p>&gt; CONNECTION ESTABLISHED_</p>
-        <p>&gt; WELCOME, VISITOR.</p>
-      </div>
-
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <div class="kicker">[ PRIVATE NETWORK // FIRST VISIT ]</div>
-
-          <h1><span class="glitch" data-text="Аут-Лайн">Аут-Лайн</span></h1>
-
-          <div class="rule"></div>
-
-          <p class="lead">
+<div class="menu-overlay" id="menuOverlay">
+<div class="menu-panel">
+<div class="menu-top">
+<span>MAIN MENU</span>
+<button id="menuClose">×</button>
+</div>
+<nav>
+<button class="menu-item active" data-section="home"><b>01</b><span data-i18n="home">ГЛАВНАЯ</span><em>HOME</em></button>
+<button class="menu-item" data-section="about"><b>02</b><span data-i18n="about_nav">О NORTEMS</span><em>ABOUT</em></button>
+<button class="menu-item" data-section="people"><b>03</b><span data-i18n="people_nav">УЧАСТНИКИ</span><em>PEOPLE</em></button>
+<button class="menu-item" data-section="archive"><b>04</b><span data-i18n="archive_nav">АРХИВ</span><em>ARCHIVE</em></button>
+<button class="menu-item" data-section="join"><b>05</b><span data-i18n="join_nav">ПРИСОЕДИНИТЬСЯ</span><em>JOIN</em></button>
+</nav>
+<div class="menu-footer">CHANNEL: NORTEMS / STATUS: OPEN</div>
+</div>
+</div>
+<main class="page" id="home">
+<section class="hero">
+<div class="terminal">
+<p>&gt; CONNECTION ESTABLISHED_</p>
+<p>&gt; WELCOME, VISITOR.</p>
+</div>
+<div class="hero-grid">
+<div class="hero-copy">
+<div class="kicker">[ PRIVATE NETWORK // FIRST VISIT ]</div>
+<h1><span class="glitch" data-i18n="company" data-i18n-attr="data-text:company" data-text="Аут-Лайн">Аут-Лайн</span></h1>
+<div class="rule"></div>
+<p class="lead" data-i18n="hero">
             Это место ещё не успело решить, кем ты должен быть.
             Поэтому здесь можно просто остановиться, посмотреть вокруг
             и понять, хочешь ли ты остаться.
           </p>
-
-          <div class="actions">
-            <button class="main-action" id="joinBtn">ПРИСОЕДИНИТЬСЯ <b>→</b></button>
-            <button class="secondary-action" data-placeholder="login">ВОЙТИ</button>
-          </div>
-
-          <div class="microcopy">
-            <span>NO ADS</span>
-            <span>NO FEED</span>
-            <span>NO ALGORITHM</span>
-          </div>
-        </div>
-
-        <div class="system-card">
-          <div class="card-head"><span>SEARCH / 1984</span><span>●</span></div>
-          <div class="big-mark">N</div>
-          <div class="meter-label">SEARCH DATA</div>
-          <div class="meter"><i></i></div>
-          <div class="card-data">
-            <span>CHANNEL</span><b>84</b>
-            <span>STATUS</span><b>OPEN</b>
-            <span>VISITORS</span><b>---</b>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="description" id="about">
-      <div class="section-index">01 / DESCRIPTION</div>
-      <div class="description-grid">
-        <h2>Аут-Лайн<br><span>ОПИСАНИЕ</span></h2>
-        <div class="description-copy">
-          <p>
+<div class="actions">
+<button class="main-action" data-i18n="join_nav" id="joinBtn">ПРИСОЕДИНИТЬСЯ <b>→</b></button>
+<button class="secondary-action" data-i18n="login" data-placeholder="login">ВОЙТИ</button>
+</div>
+<div class="microcopy">
+<span>NO ADS</span>
+<span>NO FEED</span>
+<span>NO ALGORITHM</span>
+</div>
+</div>
+<div class="system-card">
+<div class="card-head"><span>SEARCH / 1984</span><span>●</span></div>
+<div class="big-mark">N</div>
+<div class="meter-label">SEARCH DATA</div>
+<div class="meter"><i></i></div>
+<div class="card-data">
+<span>CHANNEL</span><b>84</b>
+<span>STATUS</span><b>OPEN</b>
+<span>VISITORS</span><b>---</b>
+</div>
+</div>
+</div>
+</section>
+<section class="description" id="about">
+<div class="section-index">01 / DESCRIPTION</div>
+<div class="description-grid">
+<h2 data-i18n="company">Аут-Лайн<br/><span data-i18n="about_en">ОПИСАНИЕ</span></h2>
+<div class="description-copy">
+<p data-i18n="desc1">
             NORTEMS — это не попытка сделать ещё одну страницу, которую
             пролистывают между двумя уведомлениями. Это небольшое цифровое
             пространство для людей, которым интересно находить странное,
             создавать своё и разговаривать не только о том, что уже стало
             популярным.
           </p>
-          <p>
+<p data-i18n="desc2">
             Здесь нет необходимости выглядеть определённым образом.
             Не нужно подбирать правильный ответ или доказывать, что ты
             достаточно интересный. Можно прийти с идеей, с историей,
             с проектом или просто с любопытством.
           </p>
-          <p class="quote">«СНАЧАЛА ПОСМОТРИ.<br>ПОТОМ РЕШИ, ОСТАВАТЬСЯ ЛИ.»</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="placeholder-section" id="people">
-      <div class="section-index">02 / PEOPLE</div>
-      <h2>ЛЮДИ<br><span>СКОРО.</span></h2>
-      <p>Раздел пока закрыт. Здесь появятся участники сети.</p>
-    </section>
-
-    
-
-<section class="archive-section" id="archive">
-  <div class="section-kicker" data-i18n="archive_kicker">АРХИВ / ИЗМЕНЕНИЯ</div>
-  <h2 data-i18n="archive_title">История проекта</h2>
-  <div class="archive-list">
-    <article class="archive-entry">
-      <div class="archive-number">1.</div>
-      <div>
-        <h3 data-i18n="v1">Старая версия</h3>
-        <p data-i18n="v1p">Первый вариант Аут-Лайна — яркая рекламная эстетика, насыщенные цвета и крупная подача.</p>
-      </div>
-    </article>
-    <article class="archive-entry">
-      <div class="archive-number">2.</div>
-      <div>
-        <h3 data-i18n="v2">Переход</h3>
-        <p data-i18n="v2p">Интерфейс был переведён в строгую ретро-компьютерную эстетику: CRT, терминальная графика и системные элементы.</p>
-      </div>
-    </article>
-    <article class="archive-entry">
-      <div class="archive-number">3.</div>
-      <div>
-        <h3 data-i18n="v3">Новая версия</h3>
-        <p data-i18n="v3p">Добавлены боковая навигация, четыре цветовые темы, меню и базовые интерактивные функции.</p>
-      </div>
-    </article>
-  </div>
+<p class="quote" data-i18n="quote2">«СНАЧАЛА ПОСМОТРИ.<br/>ПОТОМ РЕШИ, ОСТАВАТЬСЯ ЛИ.»</p>
+</div>
+</div>
 </section>
-
-
-
-    <section class="join-section" id="join">
-      <div class="section-index">04 / APPLICATION</div>
-      <div class="join-box">
-        <h2>ХОЧЕШЬ<br><span>ВОЙТИ?</span></h2>
-        <p>Заполни короткую анкету. Никаких публичных профилей без твоего согласия.</p>
-
-        <form id="applicationForm">
-          <label>ИМЯ<input name="name" required maxlength="120" placeholder="Имя"></label>
-          <label>КАК К ТЕБЕ ОБРАЩАТЬСЯ<input name="addressName" required maxlength="120" placeholder="Имя / ник"></label>
-          <label>EMAIL<input type="email" name="email" required maxlength="254" placeholder="you@example.com"></label>
-          <label>ЦЕЛЬ<textarea name="goal" required maxlength="1000" placeholder="Зачем подаёшь заявку?"></textarea></label>
-          <label>О СЕБЕ<textarea name="about" required maxlength="5000" placeholder="Расскажи немного о себе"></textarea></label>
-
-          <div class="human-box">
-            <span id="checkText">ПРОВЕРКА: НЕ БОТ</span>
-            <button type="button" id="humanBtn">ПРОВЕРИТЬ</button>
-            <div class="progress"><i id="progressBar"></i></div>
-          </div>
-
-          <button class="submit-btn" id="submitBtn" type="submit" disabled>ОТПРАВИТЬ ЗАЯВКУ →</button>
-          <p class="form-message" id="formMessage"></p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <div class="toast" id="toast"></div>
-
-  <script src="/script.js"></script>
-
-<div class="language-modal" id="languageModal" aria-hidden="true">
-  <div class="language-dialog" role="dialog" aria-modal="true" aria-labelledby="languageTitle">
-    <button class="language-close" id="languageClose" aria-label="Закрыть">×</button>
-    <div class="section-kicker" data-i18n="language_kicker">ЯЗЫК / LANGUAGE</div>
-    <h2 id="languageTitle" data-i18n="language_title">Выберите язык</h2>
-    <div class="language-options">
-      <button data-lang="en" data-i18n="english">English</button>
-      <button data-lang="zh" data-i18n="chinese">中文</button>
-      <button data-lang="ru" data-i18n="russian">Русский</button>
-      <button data-lang="uk" data-i18n="ukrainian">Українська</button>
-      <button data-lang="ja" data-i18n="japanese">日本語</button>
-    </div>
-  </div>
+<section class="placeholder-section" id="people">
+<div class="section-index">02 / PEOPLE</div>
+<h2 data-i18n="people_en">ЛЮДИ<br/><span data-i18n="soon">СКОРО.</span></h2>
+<p data-i18n="people_desc">Раздел пока закрыт. Здесь появятся участники сети.</p>
+</section>
+<section class="archive-section" id="archive">
+<div class="section-kicker" data-i18n="archive_kicker">АРХИВ / ИЗМЕНЕНИЯ</div>
+<h2 data-i18n="archive_title">История проекта</h2>
+<div class="archive-list">
+<article class="archive-entry">
+<div class="archive-number">1.</div>
+<div>
+<h3 data-i18n="v1">Старая версия</h3>
+<p data-i18n="v1p">Первый вариант Аут-Лайна — яркая рекламная эстетика, насыщенные цвета и крупная подача.</p>
+</div>
+</article>
+<article class="archive-entry">
+<div class="archive-number">2.</div>
+<div>
+<h3 data-i18n="v2">Переход</h3>
+<p data-i18n="v2p">Интерфейс был переведён в строгую ретро-компьютерную эстетику: CRT, терминальная графика и системные элементы.</p>
+</div>
+</article>
+<article class="archive-entry">
+<div class="archive-number">3.</div>
+<div>
+<h3 data-i18n="v3">Новая версия</h3>
+<p data-i18n="v3p">Добавлены боковая навигация, четыре цветовые темы, меню и базовые интерактивные функции.</p>
+</div>
+</article>
+</div>
+</section>
+<section class="join-section" id="join">
+<div class="section-index">04 / APPLICATION</div>
+<div class="join-box">
+<h2 data-i18n="app_title1">ХОЧЕШЬ<br/><span data-i18n="app_title2">ВОЙТИ?</span></h2>
+<p data-i18n="app_desc">Заполни короткую анкету. Никаких публичных профилей без твоего согласия.</p>
+<form id="applicationForm">
+<label data-i18n="name">ИМЯ<input data-i18n-placeholder="name_ph" maxlength="120" name="name" placeholder="Имя" required=""/></label>
+<label data-i18n="address">КАК К ТЕБЕ ОБРАЩАТЬСЯ<input data-i18n-placeholder="address_ph" maxlength="120" name="addressName" placeholder="Имя / ник" required=""/></label>
+<label data-i18n="email">EMAIL<input data-i18n-placeholder="email_ph" maxlength="254" name="email" placeholder="you@example.com" required="" type="email"/></label>
+<label data-i18n="purpose">ЦЕЛЬ<textarea data-i18n-placeholder="purpose_ph" maxlength="1000" name="goal" placeholder="Зачем подаёшь заявку?" required=""></textarea></label>
+<label data-i18n="story">О СЕБЕ<textarea data-i18n-placeholder="story_ph" maxlength="5000" name="about" placeholder="Расскажи немного о себе" required=""></textarea></label>
+<div class="human-box">
+<span data-i18n="human" id="checkText">ПРОВЕРКА: НЕ БОТ</span>
+<button data-i18n="check" id="humanBtn" type="button">ПРОВЕРИТЬ</button>
+<div class="progress"><i id="progressBar"></i></div>
+</div>
+<button class="submit-btn" data-i18n="submit" disabled="" id="submitBtn" type="submit">ОТПРАВИТЬ ЗАЯВКУ →</button>
+<p class="form-message" id="formMessage"></p>
+</form>
+</div>
+</section>
+</main>
+<div class="toast" id="toast"></div>
+<script src="/script.js"></script>
+<div aria-hidden="true" class="language-modal" id="languageModal">
+<div aria-labelledby="languageTitle" aria-modal="true" class="language-dialog" role="dialog">
+<button aria-label="Закрыть" class="language-close" data-i18n-aria-label="close" id="languageClose">×</button>
+<div class="section-kicker" data-i18n="language_kicker">ЯЗЫК / LANGUAGE</div>
+<h2 data-i18n="language_title" id="languageTitle">Выберите язык</h2>
+<div class="language-options">
+<button data-i18n="english" data-lang="en">English</button>
+<button data-i18n="chinese" data-lang="zh">中文</button>
+<button data-i18n="russian" data-lang="ru">Русский</button>
+<button data-i18n="ukrainian" data-lang="uk">Українська</button>
+<button data-i18n="japanese" data-lang="ja">日本語</button>
+</div>
+</div>
 </div>
 
+<div aria-hidden="true" class="success-modal" id="successModal">
+<div class="success-frame">
+<div aria-hidden="true" class="success-check">✓</div>
+<div class="success-kicker" data-i18n="success_kicker">ПЕРЕДАЧА ЗАВЕРШЕНА</div>
+<h2><span data-i18n="success_title1">ЗАЯВКА</span><br/><strong data-i18n="success_title2">ПРИНЯТА.</strong></h2>
+<p data-i18n="success_desc">Система получила твою анкету. Теперь остаётся ждать ответа. Первый шаг сделан.</p>
+<button class="success-back" data-i18n="success_back" id="successBack">ВЕРНУТЬСЯ</button>
+</div>
+</div>
 </body>
 </html>

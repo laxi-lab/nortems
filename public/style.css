@@ -214,3 +214,49 @@ body.theme-cyan .scanlines,body.theme-red .scanlines,body.theme-yellow .scanline
 .language-options button{border:1px solid var(--line);background:transparent;color:var(--white);padding:14px;text-align:left;font:inherit;cursor:pointer}
 .language-options button:hover{background:rgba(103,255,155,.09);border-color:var(--green);color:var(--green)}
 @media(max-width:520px){.language-options{grid-template-columns:1fr}.language-dialog{padding:24px}}
+
+/* V8 — application success window */
+.success-modal{
+  position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;
+  padding:24px;background:rgba(0,0,0,.78);backdrop-filter:blur(4px);
+}
+.success-modal.open{display:flex}
+.success-frame{
+  width:min(505px,calc(100vw - 48px));min-height:620px;position:relative;
+  border:3px solid #25f4ff;background:#040306;padding:70px 42px 55px;
+  text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  box-shadow:10px 16px 0 #6b16ff, 0 0 55px rgba(37,244,255,.18);
+  overflow:hidden;
+}
+.success-frame:before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0,rgba(255,255,255,.025) 1px,transparent 1px,transparent 4px);
+}
+.success-check{
+  position:relative;font-family:Arial,sans-serif;font-size:112px;line-height:1;
+  color:#19ff57;text-shadow:0 0 25px rgba(25,255,87,.55);margin-bottom:35px;
+}
+.success-kicker{
+  position:relative;color:#ffe900;font-weight:700;font-size:12px;letter-spacing:6px;margin-bottom:28px;
+}
+.success-frame h2{
+  position:relative;font-family:Arial,Helvetica,sans-serif;font-size:49px;line-height:.9;
+  letter-spacing:-2px;color:#fff;margin:0 0 45px;
+}
+.success-frame h2 strong{color:#ff12c8;font-size:1.02em}
+.success-frame p{
+  position:relative;max-width:390px;color:#fff;font-family:Arial,Helvetica,sans-serif;
+  font-size:17px;line-height:1.75;margin:0 0 40px;
+}
+.success-back{
+  position:relative;border:2px solid #25f4ff;background:transparent;color:#fff;
+  padding:15px 30px;font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:14px;cursor:pointer;
+}
+.success-back:hover{background:#25f4ff;color:#030303}
+@media(max-width:600px){
+  .success-frame{min-height:650px;width:min(505px,calc(100vw - 70px));padding:45px 24px}
+  .success-check{font-size:88px;margin-bottom:25px}
+  .success-kicker{font-size:9px;letter-spacing:4px}
+  .success-frame h2{font-size:42px;margin-bottom:35px}
+  .success-frame p{font-size:16px}
+}
