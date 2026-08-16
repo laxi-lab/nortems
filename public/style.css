@@ -170,3 +170,23 @@ body.theme-cyan .scanlines,body.theme-red .scanlines,body.theme-yellow .scanline
 @media(max-width:800px){.archive-grid{grid-template-columns:1fr}}
 
 .menu-panel{overflow-y:auto;max-height:100vh}
+
+/* V4: restore the always-visible quick menu */
+.rail{
+  display:flex !important;
+  flex-direction:column;
+  align-items:stretch;
+  gap:0;
+  visibility:visible !important;
+  opacity:1 !important;
+}
+.rail .rail-btn{
+  display:flex !important;
+  visibility:visible !important;
+  opacity:1 !important;
+}
+@media(max-width:800px){
+  .rail{
+    display:flex !important;
+  }
+}
