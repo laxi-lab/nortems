@@ -91,7 +91,7 @@ textarea{min-height:115px}
 .menu-footer{position:absolute;bottom:25px;color:#416d50;font-size:8px;letter-spacing:2px}
 .toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,20px);opacity:0;pointer-events:none;border:1px solid var(--green);background:#030805;color:var(--green);padding:13px 18px;font-size:10px;z-index:60;transition:.2s;box-shadow:0 0 20px rgba(103,255,155,.12)}
 .toast.show{opacity:1;transform:translate(-50%,0)}
-body.alt{--green:#8de8ff;--green2:#55b9d8;--dim:#7195a0;--line:#315c67}
+body.alt{--green:#67ff9b;--green2:#20d86f;--dim:#79a88a;--line:#1d6b3c}
 @media(max-width:900px){
  .header{grid-template-columns:60px 1fr 100px;padding:0 15px}.header-code{font-size:8px}.rail{right:8px;width:55px}.rail-btn{width:47px}.rail-btn .icon{font-size:18px}.page{padding-right:72px}
  .hero{padding:55px 5vw}.hero-grid{grid-template-columns:1fr;gap:40px}h1{letter-spacing:-7px}.system-card{display:none}.description-grid{grid-template-columns:1fr;gap:35px}
@@ -100,3 +100,36 @@ body.alt{--green:#8de8ff;--green2:#55b9d8;--dim:#7195a0;--line:#315c67}
  .header{height:66px}.wordmark{font-size:16px;letter-spacing:3px}.header-code{display:none}.rail{top:auto;bottom:10px;right:10px;flex-direction:row;width:auto}.rail-btn{min-height:48px;width:45px;border-bottom:0}.rail-btn small{display:none}.rail-line{height:30px;width:1px;border-top:0;border-left:1px solid var(--line);margin:0 3px}
  .page{padding-right:0}.hero{min-height:680px;padding:45px 24px 70px}.terminal{margin-bottom:40px}h1{font-size:clamp(60px,20vw,105px);letter-spacing:-5px}.lead{font-size:14px}.microcopy{gap:10px;flex-wrap:wrap}.description,.placeholder-section,.join-section{padding:65px 24px}.description-grid{display:block}h2{letter-spacing:-3px;font-size:58px}.join-box{padding:25px}form{grid-template-columns:1fr}.human-box{grid-template-columns:1fr}.menu-panel{padding:20px}.menu-item{grid-template-columns:35px 1fr}.menu-item em{display:none}
 }
+
+/* V2: menu and social icon refinements */
+.menu-trigger{position:relative;transition:.15s}
+.menu-trigger:hover{background:rgba(103,255,155,.10);box-shadow:0 0 18px rgba(103,255,155,.12)}
+.menu-trigger:active{transform:scale(.96)}
+.menu-trigger span{transition:.15s}
+.social-icon{display:grid;place-items:center;width:23px;height:23px}
+.social-icon svg{width:22px;height:22px;fill:currentColor;display:block}
+.tiktok-icon svg{filter:drop-shadow(2px 1px 0 rgba(255,60,100,.35))}
+.youtube-icon svg{width:23px;height:23px}
+.discord-icon svg{width:23px;height:23px}
+
+/* Чёрно-белая тема: белое на чёрном <-> чёрное на белом */
+body.light-mode{
+  --bg:#f2f2ee;--panel:#fff;--green:#050505;--green2:#222;
+  --dim:#3f3f3f;--line:#777;--white:#090909;--shadow:rgba(0,0,0,.12);
+}
+body.light-mode:before{
+  background:
+    radial-gradient(circle at 45% 20%,rgba(0,0,0,.035),transparent 28%),
+    linear-gradient(90deg,rgba(0,0,0,.035) 1px,transparent 1px),
+    linear-gradient(rgba(0,0,0,.025) 1px,transparent 1px);
+  background-size:auto,64px 64px,64px 64px;
+}
+body.light-mode .header,
+body.light-mode .menu-overlay,
+body.light-mode .menu-panel,
+body.light-mode .rail,
+body.light-mode .system-card,
+body.light-mode .join-box{background:rgba(255,255,255,.92)}
+body.light-mode input,body.light-mode textarea{background:#fff;color:#090909}
+body.light-mode .scanlines{opacity:.12}
+body.light-mode .noise{opacity:.018}

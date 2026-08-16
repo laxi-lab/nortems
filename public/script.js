@@ -57,8 +57,10 @@ const actions = {
   community: () => showToast("СООБЩЕСТВО // РАЗДЕЛ СКОРО"),
   notifications: () => showToast("УВЕДОМЛЕНИЯ // 0"),
   theme: () => {
-    document.body.classList.toggle("alt");
-    showToast(document.body.classList.contains("alt") ? "THEME: ICE" : "THEME: TERMINAL");
+    document.body.classList.toggle("light-mode");
+    showToast(document.body.classList.contains("light-mode")
+      ? "ТЕМА: ЧЁРНОЕ НА БЕЛОМ"
+      : "ТЕМА: БЕЛОЕ НА ЧЁРНОМ");
   },
   tiktok: () => showToast("TIKTOK // ССЫЛКА СКОРО"),
   youtube: () => showToast("VIDEO // ССЫЛКА СКОРО"),
