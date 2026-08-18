@@ -14,7 +14,7 @@
 <div class="noise"></div>
 </div>
 <header class="header">
-<button aria-label="Открыть главное меню" class="menu-trigger" data-i18n-aria-label="menu_open" data-i18n-title="menu_title" id="menuTrigger" title="Открыть меню">
+<button aria-label="Открыть главное меню" class="menu-trigger" data-i18n-aria-label="menu_open" data-i18n-title="menu_title" id="menuTrigger" title="Открыть главное меню">
 <span></span><span></span><span></span>
 </button>
 <button aria-label="NORTEMS" class="wordmark" id="homeBtn">
@@ -60,7 +60,7 @@
 <div class="menu-overlay" id="menuOverlay">
 <div class="menu-panel">
 <div class="menu-top">
-<span>MAIN MENU</span>
+<span data-i18n="main_menu">ГЛАВНОЕ МЕНЮ</span>
 <button id="menuClose">×</button>
 </div>
 <nav>
@@ -70,7 +70,19 @@
 <button class="menu-item" data-section="archive"><b>04</b><span data-i18n="archive_nav">АРХИВ</span><em>ARCHIVE</em></button>
 <button class="menu-item" data-section="join"><b>05</b><span data-i18n="join_nav">ПРИСОЕДИНИТЬСЯ</span><em>JOIN</em></button>
 </nav>
-<div class="menu-footer">CHANNEL: NORTEMS / STATUS: OPEN</div>
+<div class="menu-quick">
+<p class="menu-quick-title" data-i18n="quick_controls">СИСТЕМНЫЕ КАНАЛЫ</p>
+<div class="menu-quick-grid">
+<button class="menu-quick-btn" data-action="time"><span class="qicon">◷</span><small data-i18n="time">ВРЕМЯ</small></button>
+<button class="menu-quick-btn" data-action="community"><span class="qicon">♙</span><small data-i18n="community">СООБЩЕСТВО</small></button>
+<button class="menu-quick-btn" data-action="notify"><span class="qicon">⌁</span><small data-i18n="contact">СВЯЗЬ</small></button>
+<button class="menu-quick-btn" data-action="lang"><span class="qicon">文</span><small data-i18n="language">ЯЗЫК</small></button>
+<button class="menu-quick-btn" data-action="theme"><span class="qicon">◐</span><small data-i18n="theme">ТЕМА</small></button>
+<button class="menu-quick-btn" data-action="tiktok"><span class="qicon social-icon tiktok-icon"><svg viewBox="0 0 24 24"><path d="M14.2 3.2v10.1a4.1 4.1 0 1 1-3.1-4v3.1a1.2 1.2 0 1 0 .8 1.2V3.2h2.3c.3 1.8 1.3 3.1 3.1 3.8v2.4a7 7 0 0 1-3.1-1.5v5.4a4.3 4.3 0 1 1-3.1-4.2V3.2z"/></svg></span><small data-i18n="tiktok">ТИКТОК</small></button>
+<button class="menu-quick-btn" data-action="youtube"><span class="qicon social-icon youtube-icon"><svg viewBox="0 0 24 24"><path d="M21.2 7.2a2.7 2.7 0 0 0-1.9-1.9C17.6 4.8 12 4.8 12 4.8s-5.6 0-7.3.5A2.7 2.7 0 0 0 2.8 7.2 28 28 0 0 0 2.3 12a28 28 0 0 0 .5 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.3.5 7.3.5s5.6 0 7.3-.5a2.7 2.7 0 0 0 1.9-1.9 28 28 0 0 0 .5-4.8 28 28 0 0 0-.5-4.8zM10 15.5v-7l6 3.5z"/></svg></span><small data-i18n="youtube">ЮТУБ</small></button>
+<button class="menu-quick-btn" data-action="discord"><span class="qicon social-icon discord-icon"><svg viewBox="0 0 24 24"><path d="M18.9 5.3A16.2 16.2 0 0 0 15 4l-.5 1a14.2 14.2 0 0 0-5 0L9 4a16.2 16.2 0 0 0-3.9 1.3C2.6 7.6 2 11.7 2.2 15.8a15.7 15.7 0 0 0 4.8 2.4l1.2-1.6c-.7-.3-1.3-.6-1.9-1 .2.2.5.3.7.4 2.8 1.3 5.9 1.3 8.7 0 .3-.1.5-.2.8-.4-.6.4-1.2.7-1.9 1l1.2 1.6a15.7 15.7 0 0 0 4.8-2.4c.2-4.1-.4-8.2-1.7-10.5zM8.5 14.1c-.8 0-1.5-.8-1.5-1.8s.7-1.8 1.5-1.8 1.5.8 1.5 1.8-.7 1.8-1.5 1.8zm7 0c-.8 0-1.5-.8-1.5-1.8s.7-1.8 1.5-1.8 1.5 1.8 1.5 1.8-.7 1.8-1.5 1.8z"/></svg></span><small data-i18n="discord">ДІСКОРД</small></button>
+</div></div>
+<div class="menu-footer" data-i18n="channel_status">CHANNEL: NORTEMS / STATUS: OPEN</div>
 </div>
 </div>
 <main class="page" id="home">
@@ -172,11 +184,11 @@
 <h2 data-i18n="app_title1">ХОЧЕШЬ<br/><span data-i18n="app_title2">ВОЙТИ?</span></h2>
 <p data-i18n="app_desc">Заполни короткую анкету. Никаких публичных профилей без твоего согласия.</p>
 <form id="applicationForm">
-<label data-i18n="name">ИМЯ<input data-i18n-placeholder="name_ph" maxlength="120" name="name" placeholder="Имя" required=""/></label>
-<label data-i18n="address">КАК К ТЕБЕ ОБРАЩАТЬСЯ<input data-i18n-placeholder="address_ph" maxlength="120" name="addressName" placeholder="Имя / ник" required=""/></label>
-<label data-i18n="email">EMAIL<input data-i18n-placeholder="email_ph" maxlength="254" name="email" placeholder="you@example.com" required="" type="email"/></label>
-<label data-i18n="purpose">ЦЕЛЬ<textarea data-i18n-placeholder="purpose_ph" maxlength="1000" name="goal" placeholder="Зачем подаёшь заявку?" required=""></textarea></label>
-<label data-i18n="story">О СЕБЕ<textarea data-i18n-placeholder="story_ph" maxlength="5000" name="about" placeholder="Расскажи немного о себе" required=""></textarea></label>
+<label data-i18n="name">ИМЯ<input data-i18n-placeholder="name_ph" maxlength="120" name="name" placeholder="Саша" required=""/></label>
+<label data-i18n="address">КАК К ТЕБЕ ОБРАЩАТЬСЯ<input data-i18n-placeholder="address_ph" maxlength="120" name="addressName" placeholder="Сан / Александр" required=""/></label>
+<label data-i18n="email">EMAIL<input data-i18n-placeholder="email_ph" maxlength="254" name="email" placeholder="sasha@example.com" required="" type="email"/></label>
+<label data-i18n="purpose">ЦЕЛЬ<textarea data-i18n-placeholder="purpose_ph" maxlength="1000" name="goal" placeholder="Хочу присоединиться, потому что..." required=""></textarea></label>
+<label data-i18n="story">О СЕБЕ<textarea data-i18n-placeholder="story_ph" maxlength="5000" name="about" placeholder="Напиши пару слов о себе..." required=""></textarea></label>
 <div class="human-box">
 <span data-i18n="human" id="checkText">ПРОВЕРКА: НЕ БОТ</span>
 <button data-i18n="check" id="humanBtn" type="button">ПРОВЕРИТЬ</button>

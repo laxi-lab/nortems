@@ -260,3 +260,16 @@ body.theme-cyan .scanlines,body.theme-red .scanlines,body.theme-yellow .scanline
   .success-frame h2{font-size:42px;margin-bottom:35px}
   .success-frame p{font-size:16px}
 }
+
+/* V9: utility and social controls are available from the toggleable menu */
+.rail{display:none}
+.menu-quick{margin-top:28px;border-top:1px solid var(--line);padding-top:12px}
+.menu-quick-title{font-size:8px;letter-spacing:3px;color:var(--dim);margin:0 0 8px 8px}
+.menu-quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.menu-quick-btn{min-height:58px;border:1px solid rgba(103,255,155,.18);background:transparent;color:var(--dim);cursor:pointer;display:grid;grid-template-columns:34px 1fr;align-items:center;text-align:left;padding:8px 10px;transition:.15s}
+.menu-quick-btn:hover{background:rgba(103,255,155,.08);color:var(--green);border-color:var(--green)}
+.menu-quick-btn .qicon{font-size:20px;color:var(--green);text-align:center}
+.menu-quick-btn small{font-size:8px;letter-spacing:1px;color:inherit}
+.menu-quick-btn svg{width:20px;height:20px;fill:currentColor}
+.menu-quick-btn .social-icon{display:grid;place-items:center}
+@media(max-width:600px){.menu-quick-grid{grid-template-columns:1fr}.menu-quick-btn{min-height:50px}}
