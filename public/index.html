@@ -215,13 +215,13 @@
 </div>
 </div>
 
-<div aria-hidden="true" class="success-modal" id="successModal">
-<div class="success-frame">
-<div aria-hidden="true" class="success-check">✓</div>
-<div class="success-kicker" data-i18n="success_kicker">ПЕРЕДАЧА ЗАВЕРШЕНА</div>
-<h2><span data-i18n="success_title1">ЗАЯВКА</span><br/><strong data-i18n="success_title2">ПРИНЯТА.</strong></h2>
-<p data-i18n="success_desc">Система получила твою анкету. Теперь остаётся ждать ответа. Первый шаг сделан.</p>
-<button class="success-back" data-i18n="success_back" id="successBack">ВЕРНУТЬСЯ</button>
+<div id="successModal" class="success-modal modal-overlay" aria-hidden="true">
+  <div class="success-frame">
+    <div class="success-check">✓</div>
+    <div class="success-kicker">// STATUS: 200 OK</div>
+    <h2>Заявка <strong>принята</strong></h2>
+    <p>Мы получили твои данные и скоро свяжемся с тобой в Telegram или по указанному контакту.</p>
+    <button id="successBack" class="success-back">ОТЛИЧНО</button>
 </div>
 </div>
 </body>
