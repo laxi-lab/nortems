@@ -47,7 +47,7 @@ linear-gradient(rgba(0,255,100,.018) 1px,transparent 1px);background-size:auto,6
 }
 
 .modal {
-  display: flex; /* Управляй видимостью через display: none / flex в JS */
+  display: none; /* Окно скрыто по умолчанию */
   position: fixed;
   top: 0;
   left: 0;
@@ -60,6 +60,10 @@ linear-gradient(rgba(0,255,100,.018) 1px,transparent 1px);background-size:auto,6
   z-index: 1000;
 }
 
+
+.modal.active {
+  display: flex;
+}
 .modal-content {
   background: #080c08;
   border: 1px solid #00ff66;
