@@ -47,22 +47,18 @@ linear-gradient(rgba(0,255,100,.018) 1px,transparent 1px);background-size:auto,6
 }
 
 .modal {
-  display: none; /* Окно скрыто по умолчанию */
+  display: none; /* Гарантирует, что окно скрыто при входе на сайт */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(4px);
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
+  /* остальное содержимое стилей окна */
 }
 
-
+/* Окно показывается только когда есть класс active */
 .modal.active {
-  display: flex;
+  display: flex !important;
 }
 .modal-content {
   background: #080c08;
