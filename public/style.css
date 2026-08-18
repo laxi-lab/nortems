@@ -411,3 +411,68 @@ label > span{display:block}
 /* V10 — form placeholders */
 input::placeholder, textarea::placeholder{color:#50735c;opacity:.9}
 input,textarea{width:100%}
+
+/* ==========================================================================
+   ПРИНУДИТЕЛЬНЫЙ СБРОС И СТИЛИЗАЦИЯ КНОПКИ МЕНЮ
+   ========================================================================== */
+button#menuTrigger.menu-trigger.custom-hamburger {
+  width: auto !important;
+  height: 42px !important;
+  padding: 0 14px !important;
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  background: rgba(3, 8, 5, 0.9) !important;
+  border: 1px solid var(--green) !important;
+  color: var(--green) !important;
+  cursor: pointer !important;
+  box-shadow: none !important;
+}
+
+/* Отключаем старые псевдоэлементы CSS, которые рисовали линии */
+button#menuTrigger.menu-trigger.custom-hamburger::before,
+button#menuTrigger.menu-trigger.custom-hamburger::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Сбрасываем старые внутренние span'ы, если они были */
+button#menuTrigger.menu-trigger.custom-hamburger > span:not(.hamburger-text) {
+  display: none !important;
+}
+
+/* Иконка 3 полоски */
+.hamburger-icon {
+  display: block !important;
+  width: 20px !important;
+  height: 20px !important;
+  fill: currentColor !important;
+  flex-shrink: 0 !important;
+}
+
+/* Текст [ МЕНЮ ] */
+.hamburger-text {
+  display: inline-block !important;
+  font-family: inherit !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px !important;
+  color: var(--green) !important;
+  background: transparent !important;
+  width: auto !important;
+  height: auto !important;
+  box-shadow: none !important;
+}
+
+/* Ховер эффект */
+button#menuTrigger.menu-trigger.custom-hamburger:hover {
+  background: var(--green) !important;
+  color: #031006 !important;
+  box-shadow: 0 0 15px var(--green) !important;
+}
+
+button#menuTrigger.menu-trigger.custom-hamburger:hover .hamburger-text {
+  color: #031006 !important;
+}
