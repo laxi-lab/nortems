@@ -51,48 +51,77 @@ document.querySelectorAll("[data-placeholder]").forEach(btn => {
   btn.addEventListener("click", () => showToast("ВХОД ПОКА ЗАКРЫТ // СКОРО"));
 });
 document.addEventListener('DOMContentLoaded', () => {
-  const form = document.querySelector('form'); // или id вашей формы, например: document.getElementById('register-form')
-  const successModal = document.getElementById('success-modal');
-  const closeModalBtn = document.getElementById('close-modal-btn');
+  // 1. ЛОГИКА КНОПКИ МЕНЮ
+  const menuToggle = document.getElementById('menuToggle') || document.querySelector('.menu-toggle');
+  const navMenu = document.getElementById('navMenu') || document.querySelector('.nav-menu') || document.querySelector('nav');
 
-  // Логика отправки формы
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+  }
+
+  // 2. ПРОВЕРКА НА БОТА (капча / чекбокс)
+  let isHumanVerified = false;
+  const botCheckInput = document.getElementById('botCheck') || document.querySelector('input[type="checkbox"][name="botCheck"]');
+  
+  if (botCheckInput) {
+    botCheckInput.addEventListener('change', (e) => {
+      isHumanVerified = e.target.checked;
+    });
+  } else {
+    // Если отдельного чекбокса нет, считаем проверку пройденной по умолчанию
+    isHumanVerified = true; 
+  }
+
+  // 3. ОТПРАВКА ФОРМЫ И МОДАЛЬНОЕ ОКНО
+  const form = document.getElementById('registerForm') || document.querySelector('form');
+  const modal = document.getElementById('successModal') || document.getElementById('success-modal');
+  const closeModalBtn = document.getElementById('closeModalBtn') || document.getElementById('close-modal-btn');
+
   if (form) {
     form.addEventListener('submit', async (e) => {
-      e.preventDefault(); // Отменяем стандартную перезагрузку страницы
+      e.preventDefault();
+
+      // Проверка на бота перед отправкой
+      if (botCheckInput && !isHumanVerified) {
+        alert('Пожалуйста, пройдите проверку на бота перед отправкой!');
+        return;
+      }
 
       const formData = new FormData(form);
-      const data = Object.fromEntries(formData.entries());
+      const payload = Object.fromEntries(formData.entries());
 
       try {
-        // Отправляем данные на сервер (api/register.js)
         const response = await fetch('/api/register', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json'
           },
-          body: JSON.stringify(data),
+          body: JSON.stringify(payload)
         });
 
-        // Проверяем, что сервер ответил без ошибок (код status 200-299)
         if (response.ok) {
-          // Успешно! Показываем модальное окно
-          successModal.classList.add('active');
-          form.reset(); // Очищаем форму
+          // Показываем окно ТОЛЬКО если запрос прошёл без ошибок
+          if (modal) modal.classList.add('active');
+          form.reset();
+          isHumanVerified = false; // Сбрасываем статус капчи
         } else {
-          const errorData = await response.json();
-          alert('Ошибка при отправке заявки: ' + (errorData.message || 'Попробуйте позже.'));
+          const err = await response.json().catch(() => ({}));
+          alert('Ошибка при отправке: ' + (err.message || 'Проверьте данные'));
         }
       } catch (error) {
         console.error('Ошибка сети:', error);
-        alert('Произошла ошибка при соединении с сервером.');
+        alert('Не удалось связаться с сервером. Попробуйте позже.');
       }
     });
   }
 
-  // Закрытие модального окна по кнопке «ВЕРНУТЬСЯ»
-  if (closeModalBtn && successModal) {
+  // Закрытие модального окна
+  if (closeModalBtn && modal) {
     closeModalBtn.addEventListener('click', () => {
-      successModal.classList.remove('active');
+      modal.classList.remove('active');
     });
   }
 });
