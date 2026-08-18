@@ -14,13 +14,11 @@
 <div class="noise"></div>
 </div>
 <header class="header">
-<button
-    aria-label="Открыть главное меню"
-    class="menu-trigger"
-    data-i18n-aria-label="menu_open"
-    data-i18n-title="menu_title"
-    id="menuTrigger"
-    title="Открыть меню">☰</button>
+<button class="menu-toggle" aria-label="Открыть меню">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</button>
 <button aria-label="NORTEMS" class="wordmark" id="homeBtn">
 <span data-i18n="brand">NORTEMS</span>
 <small data-i18n="network">NETWORK // 84</small>
@@ -216,14 +214,17 @@
 </div>
 </div>
 
-<div aria-hidden="true" class="success-modal" id="successModal">
-<div class="success-frame">
-<div aria-hidden="true" class="success-check">✓</div>
-<div class="success-kicker" data-i18n="success_kicker">ПЕРЕДАЧА ЗАВЕРШЕНА</div>
-<h2><span data-i18n="success_title1">ЗАЯВКА</span><br/><strong data-i18n="success_title2">ПРИНЯТА.</strong></h2>
-<p data-i18n="success_desc">Система получила твою анкету. Теперь остаётся ждать ответа. Первый шаг сделан.</p>
-<button class="success-back" data-i18n="success_back" id="successBack">ВЕРНУТЬСЯ</button>
-</div>
+
+<div class="modal" id="success-modal">
+  <div class="modal-content">
+    <div class="status-icon">✓</div>
+    <div class="status-subtitle">ПЕРЕДАЧА ЗАВЕРШЕНА</div>
+    <h2 class="status-title">ЗАЯВКА ПРИНЯТА.</h2>
+    <p class="status-text">
+      Система получила твою анкету. Теперь остаётся ждать ответа. Первый шаг сделан.
+    </p>
+    <button class="btn-return" id="close-modal-btn">ВЕРНУТЬСЯ</button>
+  </div>
 </div>
 </body>
 </html>
