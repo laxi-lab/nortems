@@ -261,15 +261,26 @@ body.theme-cyan .scanlines,body.theme-red .scanlines,body.theme-yellow .scanline
   .success-frame p{font-size:16px}
 }
 
-/* V9: utility and social controls are available from the toggleable menu */
-.rail{display:none}
-.menu-quick{margin-top:28px;border-top:1px solid var(--line);padding-top:12px}
-.menu-quick-title{font-size:8px;letter-spacing:3px;color:var(--dim);margin:0 0 8px 8px}
-.menu-quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
-.menu-quick-btn{min-height:58px;border:1px solid rgba(103,255,155,.18);background:transparent;color:var(--dim);cursor:pointer;display:grid;grid-template-columns:34px 1fr;align-items:center;text-align:left;padding:8px 10px;transition:.15s}
-.menu-quick-btn:hover{background:rgba(103,255,155,.08);color:var(--green);border-color:var(--green)}
-.menu-quick-btn .qicon{font-size:20px;color:var(--green);text-align:center}
-.menu-quick-btn small{font-size:8px;letter-spacing:1px;color:inherit}
-.menu-quick-btn svg{width:20px;height:20px;fill:currentColor}
-.menu-quick-btn .social-icon{display:grid;place-items:center}
-@media(max-width:600px){.menu-quick-grid{grid-template-columns:1fr}.menu-quick-btn{min-height:50px}}
+/* V10 — hamburger menu owns all quick actions */
+.rail{display:none !important}
+.menu-tools{margin-top:26px;border-top:1px solid var(--line);padding-top:18px}
+.menu-tools-title{font-size:8px;letter-spacing:3px;color:var(--dim);margin-bottom:10px}
+.menu-tools-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(103,255,155,.12)}
+.menu-tools-grid .rail-line{display:none}
+.menu-tools-grid .rail-btn{width:auto;min-height:68px;border-right:1px solid rgba(103,255,155,.12);border-bottom:1px solid rgba(103,255,155,.12);background:transparent}
+.menu-tools-grid .rail-btn:nth-child(4n){border-right:0}
+.menu-tools-grid .rail-btn:hover{background:rgba(103,255,155,.09)}
+.menu-tools-grid .rail-btn .icon{font-size:20px}
+.menu-tools-grid .rail-btn small{font-size:7px}
+.menu-tools-grid .social-icon svg{width:20px;height:20px;fill:currentColor}
+.menu-trigger{display:flex !important}
+label > span{display:block}
+@media(max-width:600px){
+  .menu-tools-grid{grid-template-columns:repeat(2,1fr)}
+  .menu-tools-grid .rail-btn:nth-child(4n){border-right:1px solid rgba(103,255,155,.12)}
+  .menu-tools-grid .rail-btn:nth-child(2n){border-right:0}
+}
+
+/* V10 — form placeholders */
+input::placeholder, textarea::placeholder{color:#50735c;opacity:.9}
+input,textarea{width:100%}
