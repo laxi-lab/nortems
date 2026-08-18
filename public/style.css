@@ -476,3 +476,91 @@ button#menuTrigger.menu-trigger.custom-hamburger:hover {
 button#menuTrigger.menu-trigger.custom-hamburger:hover .hamburger-text {
   color: #031006 !important;
 }
+
+
+#successModal.modal-overlay,
+#successModal.success-modal {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 99999 !important;
+  display: none;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 20px !important;
+  background: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(6px) !important;
+}
+
+/* Когда окно открыто */
+#successModal.open,
+#successModal:not([hidden]) {
+  display: flex !important;
+}
+
+/* Внутренняя карточка */
+#successModal .success-frame,
+#successModal .modal-window {
+  width: min(480px, calc(100vw - 32px)) !important;
+  background: #040306 !important;
+  border: 2px solid #25f4ff !important;
+  padding: 40px 30px !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  box-shadow: 8px 12px 0px #6b16ff, 0 0 35px rgba(37, 244, 255, 0.3) !important;
+  border-radius: 0 !important;
+}
+
+#successModal .success-check {
+  font-size: 64px !important;
+  line-height: 1 !important;
+  color: #19ff57 !important;
+  text-shadow: 0 0 20px rgba(25, 255, 87, 0.6) !important;
+  margin-bottom: 15px !important;
+}
+
+#successModal .success-kicker {
+  color: #ffe900 !important;
+  font-weight: bold !important;
+  font-size: 11px !important;
+  letter-spacing: 3px !important;
+  margin-bottom: 12px !important;
+  text-transform: uppercase !important;
+}
+
+#successModal h2 {
+  font-size: 32px !important;
+  line-height: 1.1 !important;
+  color: #ffffff !important;
+  margin: 0 0 16px 0 !important;
+}
+
+#successModal h2 strong {
+  color: #ff12c8 !important;
+}
+
+#successModal p {
+  color: #e0e0e0 !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  margin: 0 0 28px 0 !important;
+}
+
+#successModal .success-back {
+  border: 2px solid #25f4ff !important;
+  background: transparent !important;
+  color: #25f4ff !important;
+  padding: 12px 28px !important;
+  font-weight: bold !important;
+  font-size: 13px !important;
+  letter-spacing: 1.5px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+#successModal .success-back:hover {
+  background: #25f4ff !important;
+  color: #000000 !important;
+  box-shadow: 0 0 15px #25f4ff !important;
+}
