@@ -14,11 +14,8 @@
 <div class="noise"></div>
 </div>
 <header class="header">
-<button aria-label="Открыть главное меню" class="menu-trigger custom-hamburger" data-i18n-aria-label="menu_open" data-i18n-title="menu_title" id="menuTrigger" title="Открыть меню">
-  <svg class="hamburger-icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
-    <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/>
-  </svg>
-  <span class="hamburger-text">[ МЕНЮ ]</span>
+<button aria-label="Открыть главное меню" class="menu-trigger" data-i18n-aria-label="menu_open" data-i18n-title="menu_title" id="menuTrigger" title="Открыть меню">
+<span></span><span></span><span></span>
 </button>
 <button aria-label="NORTEMS" class="wordmark" id="homeBtn">
 <span data-i18n="brand">NORTEMS</span>
@@ -38,11 +35,11 @@
 <button id="menuClose">×</button>
 </div>
 <nav>
-<button class="menu-item active" data-section="home"><b>01</b><span data-i18n="home">ГЛАВНАЯ</span></button>
-<button class="menu-item" data-section="about"><b>02</b><span data-i18n="about_nav">О NORTEMS</span></button>
-<button class="menu-item" data-section="people"><b>03</b><span data-i18n="people_nav">УЧАСТНИКИ</span></button>
-<button class="menu-item" data-section="archive"><b>04</b><span data-i18n="archive_nav">АРХИВ</span></button>
-<button class="menu-item" data-section="join"><b>05</b><span data-i18n="join_nav">ПРИСОЕДИНИТЬСЯ</span></button>
+<button class="menu-item active" data-section="home"><b>01</b><span data-i18n="home">ГЛАВНАЯ</span><em>HOME</em></button>
+<button class="menu-item" data-section="about"><b>02</b><span data-i18n="about_nav">О NORTEMS</span><em>ABOUT</em></button>
+<button class="menu-item" data-section="people"><b>03</b><span data-i18n="people_nav">УЧАСТНИКИ</span><em>PEOPLE</em></button>
+<button class="menu-item" data-section="archive"><b>04</b><span data-i18n="archive_nav">АРХИВ</span><em>ARCHIVE</em></button>
+<button class="menu-item" data-section="join"><b>05</b><span data-i18n="join_nav">ПРИСОЕДИНИТЬСЯ</span><em>JOIN</em></button>
 </nav>
 
 <div class="menu-tools">
@@ -57,7 +54,7 @@
 <span class="icon">文</span><small data-i18n="language">ЯЗЫК</small>
 </button>
 <button class="rail-btn" data-action="notify" title="Связь">
-<span class="icon">✉</span><small data-i18n="contact">УВЕДОМЛЕНИЯ</small>
+<span class="icon">⌁</span><small data-i18n="contact">СВЯЗЬ</small>
 </button>
 <button class="rail-btn" data-action="theme" title="Тема">
 <span class="icon">◐</span><small data-i18n="theme">ТЕМА</small>
@@ -215,13 +212,13 @@
 </div>
 </div>
 
-<div id="successModal" class="success-modal modal-overlay" aria-hidden="true">
-  <div class="success-frame">
-    <div class="success-check">✓</div>
-    <div class="success-kicker">// STATUS: 200 OK</div>
-    <h2>Заявка <strong>принята</strong></h2>
-    <p>Мы получили твои данные и скоро свяжемся с тобой в Telegram или по указанному контакту.</p>
-    <button id="successBack" class="success-back">ОТЛИЧНО</button>
+<div aria-hidden="true" class="success-modal" id="successModal">
+<div class="success-frame">
+<div aria-hidden="true" class="success-check">✓</div>
+<div class="success-kicker" data-i18n="success_kicker">ПЕРЕДАЧА ЗАВЕРШЕНА</div>
+<h2><span data-i18n="success_title1">ЗАЯВКА</span><br/><strong data-i18n="success_title2">ПРИНЯТА.</strong></h2>
+<p data-i18n="success_desc">Система получила твою анкету. Теперь остаётся ждать ответа. Первый шаг сделан.</p>
+<button class="success-back" data-i18n="success_back" id="successBack">ВЕРНУТЬСЯ</button>
 </div>
 </div>
 </body>
