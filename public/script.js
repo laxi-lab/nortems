@@ -51,73 +51,17 @@ document.querySelectorAll("[data-placeholder]").forEach(btn => {
   btn.addEventListener("click", () => showToast("ВХОД ПОКА ЗАКРЫТ // СКОРО"));
 });
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. ЛОГИКА КНОПКИ МЕНЮ
-  const menuToggle = document.getElementById('menuToggle') || document.querySelector('.menu-toggle');
-  const navMenu = document.getElementById('navMenu') || document.querySelector('.nav-menu') || document.querySelector('nav');
-
-  if (menuToggle && navMenu) {
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-  }
-
-  // 2. ПРОВЕРКА НА БОТА (капча / чекбокс)
-  let isHumanVerified = false;
-  const botCheckInput = document.getElementById('botCheck') || document.querySelector('input[type="checkbox"][name="botCheck"]');
-  
-  if (botCheckInput) {
-    botCheckInput.addEventListener('change', (e) => {
-      isHumanVerified = e.target.checked;
-    });
-  } else {
-    // Если отдельного чекбокса нет, считаем проверку пройденной по умолчанию
-    isHumanVerified = true; 
-  }
-
-  // 3. ОТПРАВКА ФОРМЫ И МОДАЛЬНОЕ ОКНО
-  const form = document.getElementById('registerForm') || document.querySelector('form');
-  const modal = document.getElementById('successModal') || document.getElementById('success-modal');
+  // Закрытие модального окна по кнопке «ВЕРНУТЬСЯ»
   const closeModalBtn = document.getElementById('closeModalBtn') || document.getElementById('close-modal-btn');
+  const modal = document.getElementById('successModal') || document.getElementById('success-modal');
 
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      // Проверка на бота перед отправкой
-      if (botCheckInput && !isHumanVerified) {
-        alert('Пожалуйста, пройдите проверку на бота перед отправкой!');
-        return;
-      }
-
-      const formData = new FormData(form);
-      const payload = Object.fromEntries(formData.entries());
-
-      try {
-        const response = await fetch('/api/register', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(payload)
-        });
-
-        if (response.ok) {
-          // Показываем окно ТОЛЬКО если запрос прошёл без ошибок
-          if (modal) modal.classList.add('active');
-          form.reset();
-          isHumanVerified = false; // Сбрасываем статус капчи
-        } else {
-          const err = await response.json().catch(() => ({}));
-          alert('Ошибка при отправке: ' + (err.message || 'Проверьте данные'));
-        }
-      } catch (error) {
-        console.error('Ошибка сети:', error);
-        alert('Не удалось связаться с сервером. Попробуйте позже.');
-      }
+  if (closeModalBtn && modal) {
+    closeModalBtn.addEventListener('click', () => {
+      modal.classList.remove('active');
+      modal.style.display = 'none'; // Дополнительная страховка
     });
   }
-
+});
   // Закрытие модального окна
   if (closeModalBtn && modal) {
     closeModalBtn.addEventListener('click', () => {
