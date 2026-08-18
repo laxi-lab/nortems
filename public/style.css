@@ -274,6 +274,133 @@ body.theme-cyan .scanlines,body.theme-red .scanlines,body.theme-yellow .scanline
 .menu-tools-grid .rail-btn small{font-size:7px}
 .menu-tools-grid .social-icon svg{width:20px;height:20px;fill:currentColor}
 .menu-trigger{display:flex !important}
+.menu-trigger.custom-hamburger {
+  width: auto !important;
+  height: 40px !important;
+  padding: 0 12px !important;
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: rgba(3, 8, 5, 0.8) !important;
+  border: 1px solid var(--green) !important;
+  color: var(--green) !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.menu-trigger.custom-hamburger:hover {
+  background: var(--green) !important;
+  color: #031006 !important;
+  box-shadow: 0 0 15px var(--green);
+}
+
+.hamburger-icon {
+  display: block;
+  flex-shrink: 0;
+}
+
+.hamburger-text {
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  box-shadow: none !important; /* Убираем стандартную тень полосок */
+  background: transparent !important;
+  height: auto !important;
+}
+
+/* ==========================================================================
+   2. СТИЛИ ДЛЯ МОДАЛЬНОГО ОКНА "ЗАЯВКА ПОДАНА" (CYBER/RETRO STYLE)
+   ========================================================================== */
+.success-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(5px);
+}
+
+.success-modal.open {
+  display: flex !important;
+}
+
+.success-frame {
+  width: min(480px, calc(100vw - 32px));
+  position: relative;
+  background: #040306;
+  border: 2px solid #25f4ff;
+  padding: 40px 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 8px 12px 0px #6b16ff, 0 0 35px rgba(37, 244, 255, 0.25);
+  animation: modalAppear 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes modalAppear {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.success-check {
+  font-size: 72px;
+  line-height: 1;
+  color: #19ff57;
+  text-shadow: 0 0 20px rgba(25, 255, 87, 0.6);
+  margin-bottom: 15px;
+}
+
+.success-kicker {
+  color: #ffe900;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.success-frame h2 {
+  font-size: 36px;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+}
+
+.success-frame h2 strong {
+  color: #ff12c8;
+}
+
+.success-frame p {
+  color: #e0e0e0;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 30px 0;
+}
+
+.success-back {
+  border: 2px solid #25f4ff;
+  background: transparent;
+  color: #25f4ff;
+  padding: 12px 28px;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.success-back:hover {
+  background: #25f4ff;
+  color: #000;
+  box-shadow: 0 0 15px #25f4ff;
+}
 label > span{display:block}
 @media(max-width:600px){
   .menu-tools-grid{grid-template-columns:repeat(2,1fr)}
