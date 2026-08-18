@@ -50,25 +50,7 @@ $("#joinBtn").addEventListener("click", () => {
 document.querySelectorAll("[data-placeholder]").forEach(btn => {
   btn.addEventListener("click", () => showToast("ВХОД ПОКА ЗАКРЫТ // СКОРО"));
 });
-document.addEventListener('DOMContentLoaded', () => {
-  // Закрытие модального окна по кнопке «ВЕРНУТЬСЯ»
-  const closeModalBtn = document.getElementById('closeModalBtn') || document.getElementById('close-modal-btn');
-  const modal = document.getElementById('successModal') || document.getElementById('success-modal');
 
-  if (closeModalBtn && modal) {
-    closeModalBtn.addEventListener('click', () => {
-      modal.classList.remove('active');
-      modal.style.display = 'none'; // Дополнительная страховка
-    });
-  }
-});
-  // Закрытие модального окна
-  if (closeModalBtn && modal) {
-    closeModalBtn.addEventListener('click', () => {
-      modal.classList.remove('active');
-    });
-  }
-});
 
 const actions = {
   lang: () => {

@@ -14,17 +14,9 @@
 <div class="noise"></div>
 </div>
 <header class="header">
-
-<button class="menu-btn" id="menu-btn" aria-label="Меню">
-  <span class="bar"></span>
-  <span class="bar"></span>
-  <span class="bar"></span>
+<button aria-label="Открыть главное меню" class="menu-trigger" data-i18n-aria-label="menu_open" data-i18n-title="menu_title" id="menuTrigger" title="Открыть меню">
+<span></span><span></span><span></span>
 </button>
-
-<!-- Выпадающее / боковое меню (убедись, что ID совпадает с новым скриптом) -->
-<nav class="nav-menu" id="navMenu">
-  <!-- Твои ссылки меню -->
-</nav>
 <button aria-label="NORTEMS" class="wordmark" id="homeBtn">
 <span data-i18n="brand">NORTEMS</span>
 <small data-i18n="network">NETWORK // 84</small>
@@ -43,11 +35,11 @@
 <button id="menuClose">×</button>
 </div>
 <nav>
-<button class="menu-item active" data-section="home"><b>01</b><span data-i18n="home">ГЛАВНАЯ</span></button>
-<button class="menu-item" data-section="about"><b>02</b><span data-i18n="about_nav">О NORTEMS</span></button>
-<button class="menu-item" data-section="people"><b>03</b><span data-i18n="people_nav">УЧАСТНИКИ</span></button>
-<button class="menu-item" data-section="archive"><b>04</b><span data-i18n="archive_nav">АРХИВ</span></button>
-<button class="menu-item" data-section="join"><b>05</b><span data-i18n="join_nav">ПРИСОЕДИНИТЬСЯ</span></button>
+<button class="menu-item active" data-section="home"><b>01</b><span data-i18n="home">ГЛАВНАЯ</span><em>HOME</em></button>
+<button class="menu-item" data-section="about"><b>02</b><span data-i18n="about_nav">О NORTEMS</span><em>ABOUT</em></button>
+<button class="menu-item" data-section="people"><b>03</b><span data-i18n="people_nav">УЧАСТНИКИ</span><em>PEOPLE</em></button>
+<button class="menu-item" data-section="archive"><b>04</b><span data-i18n="archive_nav">АРХИВ</span><em>ARCHIVE</em></button>
+<button class="menu-item" data-section="join"><b>05</b><span data-i18n="join_nav">ПРИСОЕДИНИТЬСЯ</span><em>JOIN</em></button>
 </nav>
 
 <div class="menu-tools">
@@ -220,17 +212,14 @@
 </div>
 </div>
 
-
-<div class="modal" id="success-modal">
-  <div class="modal-content">
-    <div class="status-icon">✓</div>
-    <div class="status-subtitle">ПЕРЕДАЧА ЗАВЕРШЕНА</div>
-    <h2 class="status-title">ЗАЯВКА ПРИНЯТА.</h2>
-    <p class="status-text">
-      Система получила твою анкету. Теперь остаётся ждать ответа. Первый шаг сделан.
-    </p>
-    <button class="btn-return" id="close-modal-btn">ВЕРНУТЬСЯ</button>
-  </div>
+<div aria-hidden="true" class="success-modal" id="successModal">
+<div class="success-frame">
+<div aria-hidden="true" class="success-check">✓</div>
+<div class="success-kicker" data-i18n="success_kicker">ПЕРЕДАЧА ЗАВЕРШЕНА</div>
+<h2><span data-i18n="success_title1">ЗАЯВКА</span><br/><strong data-i18n="success_title2">ПРИНЯТА.</strong></h2>
+<p data-i18n="success_desc">Система получила твою анкету. Теперь остаётся ждать ответа. Первый шаг сделан.</p>
+<button class="success-back" data-i18n="success_back" id="successBack">ВЕРНУТЬСЯ</button>
+</div>
 </div>
 </body>
 </html>
