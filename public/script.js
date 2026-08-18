@@ -50,7 +50,52 @@ $("#joinBtn").addEventListener("click", () => {
 document.querySelectorAll("[data-placeholder]").forEach(btn => {
   btn.addEventListener("click", () => showToast("ВХОД ПОКА ЗАКРЫТ // СКОРО"));
 });
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('form'); // или id вашей формы, например: document.getElementById('register-form')
+  const successModal = document.getElementById('success-modal');
+  const closeModalBtn = document.getElementById('close-modal-btn');
 
+  // Логика отправки формы
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault(); // Отменяем стандартную перезагрузку страницы
+
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      try {
+        // Отправляем данные на сервер (api/register.js)
+        const response = await fetch('/api/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        // Проверяем, что сервер ответил без ошибок (код status 200-299)
+        if (response.ok) {
+          // Успешно! Показываем модальное окно
+          successModal.classList.add('active');
+          form.reset(); // Очищаем форму
+        } else {
+          const errorData = await response.json();
+          alert('Ошибка при отправке заявки: ' + (errorData.message || 'Попробуйте позже.'));
+        }
+      } catch (error) {
+        console.error('Ошибка сети:', error);
+        alert('Произошла ошибка при соединении с сервером.');
+      }
+    });
+  }
+
+  // Закрытие модального окна по кнопке «ВЕРНУТЬСЯ»
+  if (closeModalBtn && successModal) {
+    closeModalBtn.addEventListener('click', () => {
+      successModal.classList.remove('active');
+    });
+  }
+});
 
 const actions = {
   lang: () => {
