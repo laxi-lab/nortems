@@ -85,6 +85,7 @@ const actions = {
     const next = themes[(current + 1) % themes.length];
     document.body.classList.remove("theme-green","theme-cyan","theme-red","theme-yellow","light-mode","alt");
     document.body.classList.add("theme-" + next);
+    localStorage.setItem("nortems-theme", next);
     const lang = localStorage.getItem("nortems-language") || "ru";
     showToast((NORTEMS_I18N[lang]?.theme_msg || "THEME") + ": " + (NORTEMS_I18N[lang]?.[labels[next]] || next.toUpperCase()));
   }
@@ -207,6 +208,11 @@ function applyLanguage(lang) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("nortems-theme");
+  if (savedTheme && ["green","cyan","red","yellow"].includes(savedTheme)) {
+    document.body.classList.remove("theme-green","theme-cyan","theme-red","theme-yellow");
+    document.body.classList.add("theme-" + savedTheme);
+  }
   applyLanguage(localStorage.getItem("nortems-language") || "ru");
 
   document.querySelectorAll(".language-options button").forEach(btn => {
